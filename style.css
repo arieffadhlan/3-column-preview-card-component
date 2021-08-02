@@ -14,14 +14,75 @@ body {
 
 .container {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+section {
+	max-width: 315px;
+	width: 100%;
+	padding: 50px;
 }
 
 #sedans {
 	background-color: hsl(31, 77%, 52%);
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
 }
 
 #suvs {
-	background-color: ;
+	background-color: hsl(184, 100%, 22%);
 }
 
-#luxury;
+#luxury {
+	background-color: hsl(179, 100%, 13%);
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.sedans-icon,
+.suvs-icon,
+.luxury-icon,
+.sedans-title,
+.suvs-title,
+.luxury-title {
+	margin-bottom: 25px;
+}
+
+.sedans-title,
+.suvs-title,
+.luxury-title {
+	font-family: "Big Shoulders Display", cursive;
+	font-size: 32px;
+	color: hsl(0, 0%, 95%);
+}
+
+.sedans-desc,
+.suvs-desc,
+.luxury-desc {
+	color: hsla(0, 0%, 100%, 0.75);
+	opacity: 0.8;
+	font-size: 15px;
+	margin-bottom: 80px;
+}
+
+button {
+	font-family: "Lexend Deca", sans-serif;
+	border: 0;
+	border-radius: 30px;
+	background-color: hsl(0, 0%, 95%);
+	padding: 10px 20px;
+}
+
+.sedans-button {
+	color: hsl(31, 77%, 52%);
+}
+
+.suvs-button {
+	color: hsl(184, 100%, 22%);
+}
+
+.luxury-button {
+	color: hsl(179, 100%, 13%);
+}
