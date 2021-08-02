@@ -7,21 +7,24 @@
 }
 
 body {
-	max-width: 1440px;
 	width: 100%;
+	margin: 10vh auto;
 	font-family: "Lexend Deca", sans-serif;
 }
 
 .container {
+	width: 75vw;
+	margin: auto;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
 }
 
-section {
-	max-width: 315px;
-	width: 100%;
+#sedans,
+#suvs,
+#luxury {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 33.3%;
 	padding: 50px;
 }
 
@@ -41,48 +44,99 @@ section {
 	border-top-right-radius: 10px;
 }
 
-.sedans-icon,
-.suvs-icon,
-.luxury-icon,
-.sedans-title,
-.suvs-title,
-.luxury-title {
-	margin-bottom: 25px;
+.sedans-content,
+.suvs-content,
+.luxury-content {
+	display: flex;
+	flex-direction: column;
 }
 
-.sedans-title,
-.suvs-title,
-.luxury-title {
+section div img {
+	width: 65px;
+	margin-bottom: 30px;
+}
+
+section div h1 {
 	font-family: "Big Shoulders Display", cursive;
-	font-size: 32px;
+	font-size: 48px;
 	color: hsl(0, 0%, 95%);
+	margin-bottom: 30px;
 }
 
-.sedans-desc,
-.suvs-desc,
-.luxury-desc {
+section div p {
 	color: hsla(0, 0%, 100%, 0.75);
 	opacity: 0.8;
 	font-size: 15px;
-	margin-bottom: 80px;
+}
+
+.sedans-button,
+.suvs-button,
+.luxury-button {
+	display: flex;
+	margin-top: 60px;
 }
 
 button {
 	font-family: "Lexend Deca", sans-serif;
-	border: 0;
+	border: 2px solid hsl(0, 0%, 95%);
 	border-radius: 30px;
 	background-color: hsl(0, 0%, 95%);
 	padding: 10px 20px;
+	font-weight: 600;
 }
 
-.sedans-button {
+.sedans-button button {
 	color: hsl(31, 77%, 52%);
 }
 
-.suvs-button {
+.sedans-button button:hover {
+	cursor: pointer;
+	background-color: hsl(31, 77%, 52%);
+	color: hsl(0, 0%, 95%);
+}
+
+.suvs-button button {
 	color: hsl(184, 100%, 22%);
 }
 
-.luxury-button {
+.suvs-button button:hover {
+	cursor: pointer;
+	background-color: hsl(184, 100%, 22%);
+	color: hsl(0, 0%, 95%);
+}
+
+.luxury-button button {
 	color: hsl(179, 100%, 13%);
+}
+
+.luxury-button button:hover {
+	cursor: pointer;
+	background-color: hsl(179, 100%, 13%);
+	color: hsl(0, 0%, 95%);
+}
+
+@media screen and (max-width: 768px) {
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	.container {
+		flex-direction: column;
+	}
+
+	#sedans,
+	#suvs,
+	#luxury {
+		width: 100%;
+	}
+
+	#sedans {
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 0;
+	}
+
+	#luxury {
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 10px;
+	}
 }
